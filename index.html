@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Museo de Arte</title>
+    <link rel="stylesheet" href="contenido.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="header" class="header">
+      <div class="cabeza">
+        <a href="index.html"
+          ><img src="imagenes\logo.png" alt="Logo del Museo" width="200"
+        /></a>
+        <nav id="navbarprin" class="navbarprin">
+          <ul class="nav-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+              <details>
+                <summary>Exposiciones</summary>
+
+                <ul class="submenu">
+                  <li><a href="renacimiento.html">Renacimiento</a></li>
+                  <li><a href="barroco.html">Barroco</a></li>
+                  <li><a href="impresionismo.html">Impresionismo</a></li>
+                  <li><a href="cubismo.html">Cubismo</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="index.html#datos-museo">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="museo" class="museo">
+        <h1>Museo de Arte</h1>
+        <p>
+          Bienvenido al Museo de Arte, un lugar donde la creatividad y la
+          expresión artística se encuentran. Nuestro museo alberga una amplia
+          colección de obras de arte que abarcan diferentes épocas y estilos,
+          desde pinturas clásicas hasta esculturas contemporáneas.
+        </p>
+        <p>
+          Explora nuestras exposiciones actuales y descubre la riqueza cultural
+          que ofrecemos. Nuestro objetivo es brindar a los visitantes una
+          experiencia única y enriquecedora, fomentando el aprecio por el arte y
+          la cultura.
+        </p>
+      </section>
+
+      <section class="carruselprin">
+        <div class="imagenes">
+          <div class="slide activo">
+            <img
+              src="imagenes\renacimiento.jpg"
+              alt="Exposición de Renacimiento"
+            />
+            <div class="descripcion">
+              <h2>Exposición de Renacimiento</h2>
+              <p>
+                Descubre las obras maestras del Renacimiento, una época de gran
+                esplendor artístico y cultural.
+              </p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="imagenes\barroco.jpg" alt="Exposición de Barroco" />
+            <div class="descripcion">
+              <h2>Exposición de Barroco</h2>
+              <p>
+                Sumérgete en el mundo del Barroco, caracterizado por su
+                dramatismo y ornamentación.
+              </p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img
+              src="imagenes\impresionismo.jpg"
+              alt="Exposición de Impresionismo"
+            />
+            <div class="descripcion">
+              <h2>Exposición de Impresionismo</h2>
+              <p>
+                Explora el movimiento impresionista, que capturó la luz y el
+                color de manera innovadora.
+              </p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="imagenes\cubismo.jpg" alt="Exposición de Cubismo" />
+            <div class="descripcion">
+              <h2>Exposición de Cubismo</h2>
+              <p>
+                Descubre la revolución del Cubismo, que desafió las convenciones
+                tradicionales de la representación artística.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- botones carrusel -->
+        <button class="btn anterior" onclick="cambiarSlide(-1)">
+          &#10094;
+        </button>
+        <button class="btn siguiente" onclick="cambiarSlide(1)">
+          &#10095;
+        </button>
+      </section>
+
+      <section class="sobremuseo">
+        <h2>Sobre el Museo</h2>
+        <div class="contenido">
+          <img src="imagenes\elmuseo.jpg" alt="Imagen del Museo" />
+          <p>
+            Nuestro museo busca acercar el arte a todas las personas,
+            promoviendo el conocimiento, la apreciación artística y el
+            descubrimiento de diferentes expresiones culturales. A través de
+            nuestras colecciones, invitamos a explorar la historia y evolución
+            del arte.
+          </p>
+        </div>
+      </section>
+
+      <section class="informacion">
+        <div class="mapa">
+          <iframe
+            src="https://www.google.com/maps?q=Palacio+de+Bellas+Artes+CDMX&output=embed"
+            width="100%"
+            height="500"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+
+        <div id="datos-museo" class="datos-museo">
+          <h2>Información del Museo</h2>
+
+          <div class="dato">
+            <h3>HORARIOS</h3>
+            <p>Martes a domingo, de 10:00 a 18:00 h.</p>
+          </div>
+
+          <div class="dato">
+            <h3>TAQUILLA</h3>
+            <p>
+              Entrada general: $95 MXN.<br />
+              Domingos entrada libre.<br />
+              Consulta los descuentos disponibles.
+            </p>
+          </div>
+
+          <div class="dato">
+            <h3>DIRECCIÓN</h3>
+            <p>
+              Av. Juárez s/n, esquina con Eje Central Lázaro Cárdenas, Centro
+              Histórico, Cuauhtémoc, Ciudad de México, C.P. 06050.
+            </p>
+          </div>
+
+          <div class="dato">
+            <h3>CONTACTO</h3>
+            <p>55 8647 6500</p>
+            <p>mpba.informes@gmail.com</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="carrusel.js"></script>
+
+    <footer class="footer">
+      <p>&copy; 2026 Museo de Arte. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
